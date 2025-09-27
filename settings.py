@@ -1,3 +1,7 @@
-# Store config values here
-NEWS_API_KEY = "fa62084d-9c12-4a1d-865a-2ddafd17aa6a"
-NEWS_API_URL = "https://api.thenewsapi.com/v1/news/all"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # loads variables from .env file
+
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+NEWS_API_URL = os.getenv("NEWS_API_URL")
